@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPORA - Shopping Page</title>
+  <link rel="stylesheet" href="website.css">
+</head>
+<body>
+
+  
+  <header class="header">
+    <h1>SHOPORA</h1>
+    <nav>
+      <div class="head"><a href="home.html">HOME</a></div>
+      <div class="head"><a href="about.html">ABOUT US</a></div>
+      <div class="head"><a href="contact.html">CONTACT US</a></div>
+    </nav>
+  </header>
+
+  <div class="user-actions">  
+      <button id="loginBtn">Login</button>
+      <button id="signUpBtn">Sign Up</button>
+    </div>
+
+  <!-- Main Content with Grid Layout -->
+  <main class="main-content" id="mainContent" style="display: none;">
+    <h2>Choose a Category</h2>
+    <div class="departments-grid">
+      <a href="womenswear.html" class="department">
+        <img src="https://static1.squarespace.com/static/5bccf44aaadd343d1754394a/t/647cc085d090cf35c3c6d211/1685897365619/how+to+look+like+a+powerful+woman.jpg?format=1500w" alt="Womens">
+        <h3>Womens</h3>
+      </a>
+      <a href="menswear.html" class="department">
+        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/15557590/2022/2/18/a88d594a-0184-4042-baad-01c2d7874cec1645166286136-Roadster-Men-Shirts-4091645166285596-1.jpg" alt="Mens">
+        <h3>Mens</h3>
+      </a>
+      <a href="teengirl.html" class="department">
+        <img src="https://img.freepik.com/free-photo/stylish-young-teen-girl-gray_155003-9089.jpg" alt="Teen Girls">
+        <h3>Teen Girls</h3>
+      </a>
+      <a href="teenboy.html" class="department">
+        <img src="https://img.freepik.com/premium-photo/petite-young-teen-boy-model-with-varsity-jacket-fashion-can-trendy-vintage-clothes-photo-collectiona_1020495-285289.jpg" alt="Teen Boys">
+        <h3>Teen Boys</h3>
+      </a>
+      <a href="toddler.html" class="department">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuob_TMzbViBg8-zuyGs9z6ZfOWr37ktVlsw&s" alt="Toddlers">
+        <h3>Toddlers</h3>
+      </a>
+    </div>
+  </main>
+
+ <!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h3>Login</h3>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <label>
+        <input type="checkbox" id="toggleLoginPassword"> Show Password
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+
+<div id="signUpModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signUpModal')">&times;</span>
+    <h3>Sign Up</h3>
+    <form id="signUpForm">
+      <input type="text" id="newUsername" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="newPassword" placeholder="Password" required>
+      <label>
+        <input type="checkbox" id="toggleSignUpPassword"> Show Password
+      </label>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+
+
+<div id="checkoutHistoryModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeCheckoutHistoryModal()">&times;</span>
+    <p class="out">Checkout History</p>
+    <div id="checkoutHistory"  class="checkout-history-container"></div>
+    <button onclick="closeCheckoutHistoryModal()">Close</button>
+  </div>
+</div>
+
+
+ 
+  <button id="logoutBtn" style="display: none;">Logout</button>
+  <button id="viewCheckoutHistoryBtn" style="display: none;">View Checkout History</button>
+
+
+  <script src="website.js"></script>
+</body>
+</html>
